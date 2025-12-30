@@ -48,7 +48,7 @@ class OllamaLLM(LLM):
     """
 
     base_url: str = "http://localhost:11434"
-    timeout_s: float = 60.0
+    timeout_s: float = 300.0
 
     def _chat(
         self,

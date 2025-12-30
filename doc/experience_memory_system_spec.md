@@ -45,12 +45,22 @@ L3 是从 L2 进一步抽象出的策略/原则（policy-like knowledge）：
 ## 3. 系统输入（Input Contract）
 
 ### 3.1 规范化输入对象（Normalized Experience Input, NEI）
-任何经验来源在进入系统前，需被适配为 NEI：
+任何经验来源在进入系统前，需被适配为 NEI。这里我们把 NEI 定义为“**来源无关的经验事件候选**”，其核心字段与 L1Event 对齐：
+- `situation`：情景
+- `goal`：目标
+- `attempt`：尝试（建议必填）
+- `result`：结果描述（可为空）
+- `reflection`：反思（可为空）
+- `label`：`success | failure | unknown`
+
+同时 NEI 必须携带来源信息以保证可追溯：
 - `source_type`：`lean | math_proof | chat | log | manual | ...`
-- `source_ref`：可追溯引用（文件路径、会话 id、实验 id 等）
-- `payload`：原始载荷（建议保留，便于审计/回放）
+- `source_ref`：可追溯引用（文件路径、会话 id、实验 id 等，**必填**）
+
+可选保留原始载荷与观测信号（便于回放/再抽取/再判定）：
+- `payload`：原始载荷（建议保留）
 - `observations`：可观测信号（proof state、编译结果、时间成本、质量指标等）
-- `hints`：人为提示（目标、关键 artifact、是否明确失败等）
+- `hints`：人为提示（关键 artifact、约束、是否明确失败等）
 
 ### 3.2 摄入输出的最小约束（MVP）
 摄入后至少产出一个候选或确定的 L1Event，满足：
