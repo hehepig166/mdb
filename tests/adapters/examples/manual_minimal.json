@@ -1,0 +1,8 @@
+{
+  "source_type": "manual",
+  "source_ref": { "note": "minimal example" },
+  "attempt": "Try applying lemma X with simp.",
+  "label": "unknown"
+}
+
+

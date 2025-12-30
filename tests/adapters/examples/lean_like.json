@@ -1,0 +1,20 @@
+{
+  "source_type": "lean",
+  "source_ref": {
+    "file": "LiveProveBench/BrascampLieb/BackgroundLemmas.lean",
+    "theorem": "some_lemma_name",
+    "ts": "2025-12-30T00:00:00Z"
+  },
+  "situation": "Lean 编译失败，报错提示缺少某个 lemma / 命名空间引用错误。",
+  "goal": "让该 lemma 编译通过并关闭当前目标。",
+  "attempt": "尝试补充 import、调整命名空间、并引入一个辅助 lemma。",
+  "result": "仍失败：出现新的类型不匹配错误。",
+  "reflection": "下次先最小化改动，优先定位 error 位置与依赖链。",
+  "label": "failure",
+  "observations": {
+    "compile": "fail",
+    "error": "type mismatch"
+  }
+}
+
+

@@ -1,0 +1,16 @@
+{
+  "source_type": "math_proof",
+  "source_ref": {
+    "project": "some-paper",
+    "section": "Lemma 2.3",
+    "note_id": "draft-001"
+  },
+  "situation": "证明卡在从局部条件推出全局结论的步骤，边界情形不清楚。",
+  "goal": "完成 Lemma 2.3 的证明。",
+  "attempt": "尝试按参数大小分情况讨论，并引入归纳假设。",
+  "result": "推进了一步，但出现一个未证明的子引理。",
+  "reflection": "需要先单独证明子引理（可能用已知定理 A 的变形）。",
+  "label": "unknown"
+}
+
+
